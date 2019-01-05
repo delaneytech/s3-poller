@@ -1,0 +1,30 @@
+cloud:
+  aws:
+    region:
+      static: us-east-1
+    credentials:
+      access-key: AKIAJ2552H4XQZO2K4LQ
+      secret-key: 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
+      use-default-aws-credentials-chain: true
+s3:
+  remote-dir: theground
+  filename-pattern: functions/*.jar
+  auto-create-local-dir: true
+  local-dir: /theground
+  delete-remote-files: true
+  preserve-timestamp: true
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        cloud:
+          stream: info
+file:
+  consumer:
+    mode: contents
+spring:
+  application:
+    admin:
+      enabled: false
+
